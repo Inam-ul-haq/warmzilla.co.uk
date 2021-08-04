@@ -1,0 +1,78 @@
+/* Scss Document */
+@mixin box-shadow($boxshadow) {
+    -webkit-box-shadow: $boxshadow;
+    -o-box-shadow: $boxshadow;
+    -moz-box-shadow: $boxshadow;
+    -ms-box-shadow: $boxshadow;
+    box-shadow: $boxshadow;
+}
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -o-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+@mixin border-radius($borderradius) {
+    -webkit-border-radius: $borderradius;
+    -o-border-radius: $borderradius;
+    -moz-border-radius: $borderradius;
+    -ms-border-radius: $borderradius;
+    border-radius: $borderradius;
+}
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    -o-animation: $animation;
+    -moz-animation: $animation;
+    -ms-animation: $animation;
+    animation: $animation;
+}
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+/* media queries mixins for responsiveness */
+@mixin mobile {
+    @media only screen and (max-width:767px) {
+        @content;
+    }
+}
+@mixin small {
+    @media only screen and (min-width:576px) and (max-width:767px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (min-width:768px) and (max-width:991px) {
+        @content;
+    }
+}
+@mixin medium {
+    @media only screen and (min-width:992px) and (max-width:1199px) {
+        @content;
+    }
+}
+@mixin large {
+    @media only screen and (min-width:1200px) {
+        @content;
+    }
+}
+/* media queries mixins for responsiveness */
+
